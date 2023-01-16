@@ -1,11 +1,13 @@
 <script lang="ts">
-export default {
+import { defineComponent } from 'vue'
+
+export default defineComponent({
     data() {
         return {
             routes: ['Home', 'Leistungen', 'Team', 'Praxis', 'Kontakt'],
         }
     },
-}
+})
 </script>
 
 <template>
@@ -30,7 +32,7 @@ export default {
                 <div class="flex items-center lg:order-2">
                     <a
                         href="#"
-                        class="bg-primary-700 hover:bg-primary-800 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 mr-2 rounded-lg px-4 py-2 text-sm font-medium text-white focus:outline-none focus:ring-4 lg:px-5 lg:py-2.5"
+                        class="mr-2 rounded-lg bg-primary-700 px-4 py-2 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 lg:px-5 lg:py-2.5"
                         >Online-Termin</a
                     >
                     <button
@@ -74,10 +76,9 @@ export default {
                     <ul
                         class="mt-4 flex flex-col font-medium lg:mt-0 lg:flex-row lg:space-x-8"
                     >
-                        <li v-for="route in routes">
+                        <li v-for="route in routes" :key="route">
                             <a
                                 href="#"
-                                :key="route"
                                 class="block rounded py-2 pr-4 pl-3 text-white lg:bg-transparent lg:p-0"
                                 aria-current="page"
                                 >{{ route }}</a
