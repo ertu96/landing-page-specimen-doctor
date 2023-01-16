@@ -8,7 +8,7 @@ import PracticeDetail from '@/components/practice-details/PracticeDetail.vue'
         <div class="flex justify-center">
             <Location />
         </div>
-        <div class="flex">
+        <div class="flex divide-x">
             <div class="w-1/2">
                 <div class="text-center text-xl">Praxis Bilk</div>
                 <div class="my-2 text-center">Muster Str. 101</div>

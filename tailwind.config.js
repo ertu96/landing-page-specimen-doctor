@@ -1,26 +1,27 @@
 /** @type {import('tailwindcss').Config} */
+// eslint-disable-next-line no-undef
 module.exports = {
     content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
     theme: {
-      extend: {
-        colors: {
-          primary: {
-            50: "#eff6ff",
-            100: "#dbeafe",
-            200: "#bfdbfe",
-            300: "#93c5fd",
-            400: "#60a5fa",
-            500: "#3b82f6",
-            600: "#2563eb",
-            700: "#1d4ed8",
-            800: "#1e40af",
-            900: "#1e3a8a",
-          },
+        extend: {
+            colors: {
+                primary: {
+                    50: '#f5f9fa',
+                    100: '#def1fc',
+                    200: '#b9def8',
+                    300: '#8abdee',
+                    400: '#5b97e0',
+                    500: '#4674d3',
+                    600: '#3a58c0',
+                    700: '#2e429d',
+                    800: '#202d72',
+                    900: '#131b49',
+                },
+            },
         },
-      },
-      container: {
-        center: true,
-      },
+        container: {
+            center: true,
+        },
     },
     plugins: [],
 }

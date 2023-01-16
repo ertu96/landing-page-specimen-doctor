@@ -1,12 +1,22 @@
 <script setup lang="ts">
-import PraxisDetail from '@/components/practice-details/PracticeDetail.vue'
+import Mail from '@/components/icons/Mail.vue'
+import Telephone from '@/components/icons/Telephone.vue'
+import PracticeDetail from '@/components/practice-details/PracticeDetail.vue'
 import ContactSupport from '../icons/ContactSupport.vue'
 </script>
 
 <template>
-    <PraxisDetail>
+    <PracticeDetail>
         <div class="flex justify-center">
             <ContactSupport />
         </div>
-    </PraxisDetail>
+        <div class="flex items-center gap-5">
+            <Telephone />
+            <span> 0211 / 463 463 21 </span>
+        </div>
+        <div class="flex items-center gap-5">
+            <Mail />
+            <span> bilk@praxis.de </span>
+        </div>
+    </PracticeDetail>
 </template>

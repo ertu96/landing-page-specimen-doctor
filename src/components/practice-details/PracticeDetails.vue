@@ -5,7 +5,7 @@ import PracticeOpeningHours from '@/components/practice-details/PracticeOpeningH
 </script>
 
 <template>
-    <div class="-mt-16 flex gap-x-0.5 px-20">
+    <div class="-mt-16 flex divide-x px-40">
         <PracticeOpeningHours />
         <PracticeLocations />
         <PracticeContact />
