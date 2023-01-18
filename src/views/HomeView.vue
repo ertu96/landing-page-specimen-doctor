@@ -1,4 +1,5 @@
 <script lang="ts">
+import Button from '@/components/Button.vue'
 import InnerContainer from '@/components/layout/InnerContainer.vue'
 import PracticeDetails from '@/components/practice-details/PracticeDetails.vue'
 import WelcomeHeader from '@/components/WelcomeHeader.vue'
@@ -9,6 +10,7 @@ export default defineComponent({
         PracticeDetails,
         WelcomeHeader,
         InnerContainer,
+        Button,
     },
 })
 </script>
@@ -22,8 +24,8 @@ export default defineComponent({
     <PracticeDetails />
     <InnerContainer>
         <WelcomeHeader />
-        <div class="flex justify-between">
-            <div>
+        <div class="my-20 grid grid-cols-3">
+            <div class="col-span-2">
                 <span class="text-lg"
                     >Ihre Gesundheit nehmen wir ganz persönlich</span
                 >
@@ -41,28 +43,32 @@ export default defineComponent({
             <img
                 src="@/assets/images/doctor-1.jpg"
                 alt="Doctor"
-                class="max-h-36 rounded-sm"
+                class="max-h-48 rounded-sm"
             />
         </div>
-        <div class="flex justify-between">
+        <div class="my-20 grid grid-cols-3">
             <img
                 src="@/assets/images/doctor-2.jpg"
                 alt="Doctor"
-                class="max-h-36 rounded-sm"
+                class="max-h-48 rounded-sm"
             />
-            <div>
+            <div class="col-span-2">
                 <span class="text-lg">Unsere Ärzte</span>
-                <ul>
-                    <li>Dr. med. John Doe | Allgemeinmedizin</li>
-                    <li>Dr. med. Fred Bloggs | Allgemeinmedizin</li>
-                    <li>Dr. med. Jane Q. Taxpayer | Chirurgie</li>
-                </ul>
-                <button>Team anzeigen</button>
+                <div class="flex gap-10">
+                    <ul>
+                        <li>Dr. med. John Doe | Allgemeinmedizin</li>
+                        <li>Dr. med. Fred Bloggs | Allgemeinmedizin</li>
+                        <li>Dr. med. Jane Q. Taxpayer | Chirurgie</li>
+                    </ul>
+                    <div class="flex flex-col justify-center">
+                        <Button>Team anzeigen</Button>
+                    </div>
+                </div>
             </div>
         </div>
         <div>
             <div class="text-center text-2xl">Unsere Leistungen</div>
-            <div class="grid grid-cols-3 gap-12">
+            <div class="grid grid-cols-3 gap-12 px-20">
                 <div class="">
                     <img
                         src="@/assets/images/doctor-3.jpg"
@@ -70,7 +76,7 @@ export default defineComponent({
                         class="aspect-square rounded-t-sm object-cover"
                     />
                     <div
-                        class="rounded-b-sm bg-blue-800 p-3 text-center text-white"
+                        class="rounded-b-sm bg-primary-800 p-3 text-center text-white"
                     >
                         Impfungen
                     </div>
@@ -82,7 +88,7 @@ export default defineComponent({
                         class="aspect-square rounded-t-sm object-cover"
                     />
                     <div
-                        class="rounded-b-sm bg-blue-800 p-3 text-center text-white"
+                        class="rounded-b-sm bg-primary-800 p-3 text-center text-white"
                     >
                         Berichte
                     </div>
@@ -94,13 +100,15 @@ export default defineComponent({
                         class="aspect-square rounded-t-sm object-cover"
                     />
                     <div
-                        class="rounded-b-sm bg-blue-800 p-3 text-center text-white"
+                        class="rounded-b-sm bg-primary-800 p-3 text-center text-white"
                     >
                         Blutuntersuchungen
                     </div>
                 </div>
             </div>
-            <button>Zu den Leistungen</button>
+            <div class="mt-8 flex justify-center">
+                <Button>Zu den Leistungen</Button>
+            </div>
         </div>
     </InnerContainer>
 </template>
