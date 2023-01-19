@@ -7,7 +7,7 @@ import ContactSupport from '../icons/ContactSupport.vue'
 
 <template>
     <PracticeDetail>
-        <div class="flex justify-center">
+        <div class="mb-2 flex justify-center">
             <ContactSupport />
         </div>
         <div class="flex items-center gap-5">

@@ -1,10 +1,12 @@
 <script lang="ts">
 import Button from '@/components/Button.vue'
+import Logo from '@/components/icons/Logo.vue'
 import { defineComponent } from 'vue'
 
 export default defineComponent({
     components: {
         Button,
+        Logo,
     },
     data() {
         return {
@@ -16,26 +18,19 @@ export default defineComponent({
 
 <template>
     <header>
-        <nav
-            class="border-gray-200 bg-white px-4 py-2.5 dark:bg-gray-800 lg:px-6"
-        >
+        <nav class="bg-primary-900 py-2 text-white">
             <div
                 class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between"
             >
                 <a href="https://flowbite.com" class="flex items-center">
-                    <img
-                        src="https://flowbite.com/docs/images/logo.svg"
-                        class="mr-3 h-6 sm:h-9"
-                        alt="Flowbite Logo"
-                    />
+                    <Logo />
                     <span
-                        class="self-center whitespace-nowrap text-xl font-semibold dark:text-white"
-                        >Flowbite</span
+                        class="self-center whitespace-nowrap text-xl font-semibold"
+                        >Praxis Mustermann</span
                     >
                 </a>
                 <div class="flex items-center lg:order-2">
                     <Button>Online-Termin</Button>
-                    >
                     <button
                         data-collapse-toggle="mobile-menu-2"
                         type="button"

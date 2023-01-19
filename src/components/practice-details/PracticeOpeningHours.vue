@@ -39,7 +39,7 @@ export default defineComponent({
 
 <template>
     <PraxisDetail>
-        <div class="flex justify-center">
+        <div class="mb-2 flex justify-center">
             <Schedule />
         </div>
 

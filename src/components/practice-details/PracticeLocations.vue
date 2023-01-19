@@ -5,7 +5,7 @@ import PracticeDetail from '@/components/practice-details/PracticeDetail.vue'
 
 <template>
     <PracticeDetail>
-        <div class="flex justify-center">
+        <div class="mb-2 flex justify-center">
             <Location />
         </div>
         <div class="flex divide-x">
