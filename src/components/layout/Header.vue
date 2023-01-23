@@ -26,13 +26,13 @@ export default defineComponent({
             <div
                 class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between"
             >
-                <a href="https://flowbite.com" class="flex items-center">
+                <div class="flex items-center">
                     <Logo />
                     <span
                         class="self-center whitespace-nowrap text-xl font-semibold"
                         >Praxis Mustermann</span
                     >
-                </a>
+                </div>
                 <div class="flex items-center lg:order-2">
                     <Button>Online-Termin</Button>
                     <button
