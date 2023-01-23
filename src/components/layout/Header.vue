@@ -55,12 +55,14 @@ export default defineComponent({
                         class="mt-4 flex flex-col font-medium lg:mt-0 lg:flex-row lg:space-x-8"
                     >
                         <li v-for="route in routes" :key="route">
-                            <a
-                                href="#"
-                                class="block rounded py-2 pr-4 pl-3 text-white lg:bg-transparent lg:p-0"
-                                aria-current="page"
-                                >{{ route }}</a
-                            >
+                            <RouterLink :to="`/${route.toLowerCase()}`">
+                                <div
+                                    class="block rounded py-2 pr-4 pl-3 text-white lg:bg-transparent lg:p-0"
+                                    aria-current="page"
+                                >
+                                    {{ route }}
+                                </div>
+                            </RouterLink>
                         </li>
                     </ul>
                 </div>

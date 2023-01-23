@@ -7,6 +7,10 @@ export default defineComponent({
             type: Boolean,
             required: false,
         },
+        clickFunction: {
+            type: Function,
+            required: false,
+        },
     },
     data() {
         return {
@@ -20,7 +24,10 @@ export default defineComponent({
 </script>
 
 <template>
-    <button :class="outlined ? outlinedClass : containedClass">
+    <button
+        :class="outlined ? outlinedClass : containedClass"
+        @click="clickFunction ?? null"
+    >
         <slot />
     </button>
 </template>

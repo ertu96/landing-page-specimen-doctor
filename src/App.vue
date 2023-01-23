@@ -6,9 +6,11 @@ import { RouterView } from 'vue-router'
 </script>
 
 <template>
-    <Header />
-    <Container>
-        <RouterView />
-    </Container>
-    <Footer />
+    <div class="flex min-h-screen flex-col justify-between">
+        <Header />
+        <Container>
+            <RouterView />
+        </Container>
+        <Footer />
+    </div>
 </template>

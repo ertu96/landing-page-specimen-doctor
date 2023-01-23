@@ -12,6 +12,14 @@ export default defineComponent({
         InnerContainer,
         Button,
     },
+    methods: {
+        navigateToServices() {
+            this.$router.replace({ path: '/leistungen' })
+        },
+        navigateToTeam() {
+            this.$router.replace({ path: '/team' })
+        },
+    },
 })
 </script>
 
@@ -26,6 +34,7 @@ export default defineComponent({
         <WelcomeHeader />
         <div class="my-20 grid grid-cols-3">
             <div class="col-span-2">
+                <div class="-ml-2 mr-1 inline-block h-4 w-1 bg-primary-500" />
                 <span class="text-lg"
                     >Ihre Gesundheit nehmen wir ganz persönlich</span
                 >
@@ -53,6 +62,8 @@ export default defineComponent({
                 class="max-h-48 rounded-sm"
             />
             <div class="col-span-2">
+                <div class="-ml-2 mr-1 inline-block h-4 w-1 bg-primary-500" />
+
                 <span class="text-lg">Unsere Ärzte</span>
                 <div class="flex gap-10">
                     <ul>
@@ -61,13 +72,17 @@ export default defineComponent({
                         <li>Dr. med. Jane Q. Taxpayer | Chirurgie</li>
                     </ul>
                     <div class="flex flex-col justify-center">
-                        <Button>Team anzeigen</Button>
+                        <RouterLink to="/team">
+                            <Button :clickFunction="navigateToTeam"
+                                >Team anzeigen</Button
+                            >
+                        </RouterLink>
                     </div>
                 </div>
             </div>
         </div>
         <div>
-            <div class="text-center text-2xl">Unsere Leistungen</div>
+            <div class="mb-6 text-center text-2xl">Unsere Leistungen</div>
             <div class="grid grid-cols-3 gap-12 px-20">
                 <div class="">
                     <img
@@ -107,7 +122,9 @@ export default defineComponent({
                 </div>
             </div>
             <div class="mt-8 flex justify-center">
-                <Button>Zu den Leistungen</Button>
+                <Button :clickFunction="navigateToServices"
+                    >Zu den Leistungen</Button
+                >
             </div>
         </div>
     </InnerContainer>
