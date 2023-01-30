@@ -34,6 +34,21 @@ const router = createRouter({
             component: () => import('@/views/ContactView.vue'),
         },
         {
+            path: '/impressum',
+            name: 'impressum',
+            component: () => import('@/views/ImpressumView.vue'),
+        },
+        {
+            path: '/datenschutzerklaerung',
+            name: 'privacy-policy',
+            component: () => import('@/views/PrivacyPolicyView.vue'),
+        },
+        {
+            path: '/cookies',
+            name: 'cookies',
+            component: () => import('@/views/CookiesView.vue'),
+        },
+        {
             path: '/:pathMatch(.*)*',
             name: 'not-found',
             component: () => import('@/views/PageNotFoundView.vue'),

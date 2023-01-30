@@ -7,15 +7,15 @@ export default defineComponent({
             links: [
                 {
                     name: 'Impressum',
-                    href: '#',
+                    href: '/impressum',
                 },
                 {
                     name: 'Datenschutzerklärung',
-                    href: '#',
+                    href: '/datenschutzerklaerung',
                 },
                 {
                     name: 'Cookies',
-                    href: '#',
+                    href: '/cookies',
                 },
             ],
         }
@@ -34,9 +34,11 @@ export default defineComponent({
             </span>
             <ul class="mt-3 flex flex-wrap items-center text-sm sm:mt-0">
                 <li v-for="link in links" :key="link.name">
-                    <a :href="link.href" class="mr-4 hover:underline md:mr-6">{{
-                        link.name
-                    }}</a>
+                    <RouterLink :to="link.href">
+                        <a class="mr-4 hover:underline md:mr-6">{{
+                            link.name
+                        }}</a>
+                    </RouterLink>
                 </li>
             </ul>
         </div>

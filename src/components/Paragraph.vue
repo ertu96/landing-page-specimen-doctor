@@ -1,4 +1,5 @@
 <script lang="ts">
+import Check from '@/components/icons/Check.vue'
 import { defineComponent, type PropType } from 'vue'
 
 interface Thumbnail {
@@ -17,6 +18,10 @@ export default defineComponent({
             type: Array as PropType<string[]>,
             required: true,
         },
+        listItems: {
+            type: Array as PropType<string[]>,
+            required: false,
+        },
         image: {
             type: Object as PropType<Thumbnail>,
             required: true,
@@ -25,6 +30,9 @@ export default defineComponent({
             type: Number,
             required: true,
         },
+    },
+    components: {
+        Check,
     },
 })
 </script>
@@ -39,6 +47,17 @@ export default defineComponent({
             <p v-for="(paragraph, index) in text" :key="index" class="mt-1">
                 {{ paragraph }}
             </p>
+
+            <ul v-if="listItems" class="mb-8 space-y-4 text-left">
+                <li
+                    v-for="(listItem, index) in listItems"
+                    :key="index"
+                    class="flex items-center space-x-3"
+                >
+                    <Check />
+                    <span>{{ listItem }}</span>
+                </li>
+            </ul>
         </div>
         <div
             class="flex justify-center"
